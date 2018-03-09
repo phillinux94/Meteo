@@ -8,10 +8,10 @@ import json
 class Meteo:
     
     # Constructeur
-    def __init__(self):
+    def __init__(self, ville):
         
         
-        serviceMeteo = 'http://www.prevision-meteo.ch/services/json/paris'
+        serviceMeteo = 'http://www.prevision-meteo.ch/services/json/' + ville
             
         html_meteo = urllib.request.urlopen(serviceMeteo)
         donnees_meteo = html_meteo.read()
